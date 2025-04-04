@@ -1,0 +1,89 @@
+#Reverse a String
+str="Bhavitha"
+print(str[::-1])
+
+reverse=" "
+for char in str:
+    reverse=char+reverse
+print(reverse)
+
+#prime number
+n=3
+def prime(n):
+    if n<=1:
+        return False
+    for i in range(2,n):
+        if(n%i==0):
+            return False
+        return True
+    
+count=0
+for i in range(1,n+1):
+    if n%i==0:
+        count+=1
+if count==2:
+    print(n,"is a prime number")
+else:
+            print(n,"is not a prime numbers")
+
+
+            
+#fibonnacci series
+n=int(input("Enter the number of terms:"))
+a,b=0,1
+print("Fibonacci series:")
+for i in range(n):
+    print(a,end=" ")
+    c=a+b
+    a=b
+    b=c
+    
+#fibonacci 
+def fibonacci(n):
+    a,b=0,1
+    fib_series=[]
+    for i in range(n):
+        print(a,end=" ")
+        fib_series.append(a)
+        c=a+b
+        a=b
+        b=c
+        return fib_series 
+
+ 
+    
+#palindrome
+n=3456
+rev=0
+while(n>0):
+    digit=n%10
+    rev=rev*10+digit
+    n=n//10
+print(rev)
+
+
+#replace even as @
+for i in range(1,100):
+    
+    if i%2==0:
+        print("@",end=" ")
+    else:
+        print(i,end="")
+
+        
+#collection iterate each element and square it
+for i in range(1,10):
+    print(i*i,end=" ")
+
+    
+#retrieve keys from dictionary and based on the key retrieve values
+d={"name":"Bhavitha","age":25,"city":"Banglore"}
+for key in d.keys():
+    print(key,":",d[key])  
+ 
+
+#create get the user details from the user,next function is to display the value whatever we get from the user
+def get_user_details():
+    name=input("Enter your name:")
+    age=int(input("Enter your age:"))
+    return name,age
